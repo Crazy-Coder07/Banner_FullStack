@@ -15,7 +15,7 @@ dotenv.config();
 
 const connection = sql.createConnection({
   host: process.env.host,
-  port: process.env.PORT,
+  port: 28126,
   database: "defaultdb",
   user: "avnadmin",
   password: process.env.password,
