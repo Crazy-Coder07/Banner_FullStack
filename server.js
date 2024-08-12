@@ -17,7 +17,7 @@ app.use(morgan('combined'));
 
 app.use("/banner", banner);
  
-const PORT=8080 || process.env.PORT
+const PORT=28126 || process.env.PORT
 app.listen(`${PORT}`,()=>{
-    console.log("server listening on port 8080");
+    console.log("server listening on port 28126");
 })
