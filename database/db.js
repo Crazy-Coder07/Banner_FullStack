@@ -1,12 +1,25 @@
 const sql = require("mysql");
+const dotenv=require("dotenv");
+
+dotenv.config(); 
+
+
+// const connection = sql.createConnection({
+//   host: "localhost",
+//   port: 3306,
+//   database: "banner_fullstack",
+//   user: "aditya",
+//   password: "aditya123",
+//   multipleStatements: true,
+// });
 
 const connection = sql.createConnection({
-  host: "localhost",
-  port: 3306,
-  database: "banner_fullstack",
-  user: "aditya",
-  password: "aditya123",
-  multipleStatements: true,
+  host: process.env.host,
+  port: process.env.PORT,
+  database: "defaultdb",
+  user: "avnadmin",
+  password: process.env.password,
+  multipleStatements: true
 });
 
 connection.connect((err) => {
